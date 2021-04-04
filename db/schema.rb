@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_04_04_075249) do
 
   create_table "beverages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "item", null: false
-    t.string "milk_type", null: false
+    t.string "milk_type"
     t.integer "energy", null: false
     t.integer "protein", null: false
     t.integer "lipid", null: false

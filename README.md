@@ -18,7 +18,7 @@
 | Column          | Type    | Options     |
 | --------------- | ------- | ----------- |
 | item            | string  | null: false |
-| milk_type       | string  | null: false |
+| milk_type       | string  |             |
 | energy          | integer | null: false |
 | protein         | integer | null: false |
 | lipid           | integer | null: false |
