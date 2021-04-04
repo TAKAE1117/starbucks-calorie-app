@@ -17,13 +17,13 @@
 
 | Column          | Type    | Options     |
 | --------------- | ------- | ----------- |
-| item            | string  | null: false |
+| item            | string  |             |
 | milk_type       | string  |             |
-| energy          | integer | null: false |
-| protein         | integer | null: false |
-| lipid           | integer | null: false |
-| carbohydrate    | integer | null: false |
-| salt_equivalent | integer | null: false |
+| energy          | decimal |             |
+| protein         | decimal |             |
+| lipid           | decimal |             |
+| carbohydrate    | decimal |             |
+| salt_equivalent | decimal |             |
 
 ### Association
 
