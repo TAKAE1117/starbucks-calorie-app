@@ -1,24 +1,42 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| email    | string | null: false |
+| password | string | null: false |
+| nickname | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :comments
 
-* Configuration
+## beverages テーブル
 
-* Database creation
+| Column          | Type    | Options     |
+| --------------- | ------- | ----------- |
+| item            | string  | null: false |
+| milk_type       | string  | null: false |
+| energy          | integer | null: false |
+| protein         | integer | null: false |
+| lipid           | integer | null: false |
+| carbohydrate    | integer | null: false |
+| salt_equivalent | integer | null: false |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column    | Type       | Options           |
+| --------- | ---------- | ----------------- |
+| text      | text       | null: false       |
+| user      | references | foreign_key: true |
+| beverages | references | foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :beverage
