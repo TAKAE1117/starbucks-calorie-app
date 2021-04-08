@@ -15,3 +15,7 @@
   <p>ドリップコーヒー</p>
   <p>ドリップコーヒー</p>
 </div>
+
+<% @beverages.each do |beverage| %>
+  <p><%= beverage.item %></p>
+<% end %>

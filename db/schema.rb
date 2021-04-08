@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(version: 2021_04_04_075249) do
   create_table "beverages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "item"
     t.string "milk_type"
-    t.decimal "energy", precision: 3, scale: 1
-    t.decimal "protein", precision: 3, scale: 1
-    t.decimal "lipid", precision: 3, scale: 1
-    t.decimal "carbohydrate", precision: 3, scale: 1
-    t.decimal "salt_equivalent", precision: 3, scale: 1
+    t.decimal "energy", precision: 4, scale: 1
+    t.decimal "protein", precision: 4, scale: 1
+    t.decimal "lipid", precision: 4, scale: 1
+    t.decimal "carbohydrate", precision: 4, scale: 1
+    t.decimal "salt_equivalent", precision: 4, scale: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
