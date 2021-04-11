@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require "csv"
+
+CSV.foreach('db/nutrient-beverage.csv', encoding: 'Shift_JIS:UTF-8') do |info|
+  Beverage.create(:item => info[0], :milk_type => info[1], :energy => info[2], :protein => info[3], :lipid => info[4], :carbohydrate => info[5], :salt_equivalent => info[6])
+end
+
+def reset_id(tablename)
+  connection = ActiveRecord::Base.connection()
+  connection.execute("select setval('#{tablename}_id_seq',(select max(id) from #{tablename}))")
+end

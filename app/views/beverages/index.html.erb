@@ -1,0 +1,2809 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <%# nav var %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <%# <a class="navbar-brand" href="#">Navbar</a>  %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <%# <a class="nav-link active" aria-current="page" href="#">Home</a> %>
+              <%= link_to "Top-Page", root_path, method: :get, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%# <a class="nav-link" href="#">Link</a> %>
+              <%= link_to "search", "#", method: :get, class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <%# nav var %>
+
+    <%# jumbotron %>
+    <div class="bg-light p-3 p-sm-5 mb-4 border-top">
+      <div class="container">
+        <h1 class="display-4">starbucks calorie</h1>
+        <p class="lead">このサイトでは、スターバックス商品のカロリー情報が簡単に分かります。</p>
+        <hr class="my-4">
+        <p>標準ドリンクのトールサイズを対象としております。</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">もっと学ぼう</a>
+      </div>
+    </div>
+    <div class="container mt-2">
+      <h1>coffee</h1>
+    </div>
+    <%# jumbotron %>
+
+    <%# grid %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "drip-coffee.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage1.item, beverage_path(@beverage1.id), method: :get %></p>
+                <p><%= link_to @beverage1.milk_type, beverage_path(@beverage1.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "drip-coffee.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage2.item, beverage_path(@beverage2.id), method: :get %></p>
+                <p><%= link_to @beverage2.milk_type, beverage_path(@beverage2.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cold-brew-coffee.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage3.item, beverage_path(@beverage3.id), method: :get %></p>
+                <p><%= link_to @beverage3.milk_type, beverage_path(@beverage3.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-press.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage4.item, beverage_path(@beverage4.id), method: :get %></p>
+                <p><%= link_to @beverage4.milk_type, beverage_path(@beverage4.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-press.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage5.item, beverage_path(@beverage5.id), method: :get %></p>
+                <p><%= link_to @beverage5.milk_type, beverage_path(@beverage5.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mist.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage6.item, beverage_path(@beverage6.id), method: :get %></p>
+                <p><%= link_to @beverage6.milk_type, beverage_path(@beverage6.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mist.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage7.item, beverage_path(@beverage7.id), method: :get %></p>
+                <p><%= link_to @beverage7.milk_type, beverage_path(@beverage7.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mist.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage8.item, beverage_path(@beverage8.id), method: :get %></p>
+                <p><%= link_to @beverage8.milk_type, beverage_path(@beverage8.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mist.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage9.item, beverage_path(@beverage9.id), method: :get %></p>
+                <p><%= link_to @beverage9.milk_type, beverage_path(@beverage9.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mist.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage10.item, beverage_path(@beverage10.id), method: :get %></p>
+                <p><%= link_to @beverage10.milk_type, beverage_path(@beverage10.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mist.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage11.item, beverage_path(@beverage11.id), method: :get %></p>
+                <p><%= link_to @beverage11.milk_type, beverage_path(@beverage11.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "espresso.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage12.item, beverage_path(@beverage12.id), method: :get %></p>
+                <p><%= link_to @beverage12.milk_type, beverage_path(@beverage12.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h1>espresso</h1>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "espresso-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage13.item, beverage_path(@beverage13.id), method: :get %></p>
+                <p><%= link_to @beverage13.milk_type, beverage_path(@beverage13.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "espresso-compana.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage14.item, beverage_path(@beverage14.id), method: :get %></p>
+                <p><%= link_to @beverage14.milk_type, beverage_path(@beverage14.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage15.item, beverage_path(@beverage15.id), method: :get %></p>
+                <p><%= link_to @beverage15.milk_type, beverage_path(@beverage15.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage16.item, beverage_path(@beverage16.id), method: :get %></p>
+                <p><%= link_to @beverage16.milk_type, beverage_path(@beverage16.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage17.item, beverage_path(@beverage17.id), method: :get %></p>
+                <p><%= link_to @beverage17.milk_type, beverage_path(@beverage17.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage18.item, beverage_path(@beverage18.id), method: :get %></p>
+                <p><%= link_to @beverage18.milk_type, beverage_path(@beverage18.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage19.item, beverage_path(@beverage19.id), method: :get %></p>
+                <p><%= link_to @beverage19.milk_type, beverage_path(@beverage19.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage20.item, beverage_path(@beverage20.id), method: :get %></p>
+                <p><%= link_to @beverage20.milk_type, beverage_path(@beverage20.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage21.item, beverage_path(@beverage21.id), method: :get %></p>
+                <p><%= link_to @beverage21.milk_type, beverage_path(@beverage21.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage22.item, beverage_path(@beverage22.id), method: :get %></p>
+                <p><%= link_to @beverage22.milk_type, beverage_path(@beverage22.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage23.item, beverage_path(@beverage23.id), method: :get %></p>
+                <p><%= link_to @beverage23.milk_type, beverage_path(@beverage23.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage24.item, beverage_path(@beverage24.id), method: :get %></p>
+                <p><%= link_to @beverage24.milk_type, beverage_path(@beverage24.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage25.item, beverage_path(@beverage25.id), method: :get %></p>
+                <p><%= link_to @beverage25.milk_type, beverage_path(@beverage25.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage26.item, beverage_path(@beverage26.id), method: :get %></p>
+                <p><%= link_to @beverage26.milk_type, beverage_path(@beverage26.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage27.item, beverage_path(@beverage27.id), method: :get %></p>
+                <p><%= link_to @beverage27.milk_type, beverage_path(@beverage27.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage28.item, beverage_path(@beverage28.id), method: :get %></p>
+                <p><%= link_to @beverage28.milk_type, beverage_path(@beverage28.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage29.item, beverage_path(@beverage29.id), method: :get %></p>
+                <p><%= link_to @beverage29.milk_type, beverage_path(@beverage29.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage30.item, beverage_path(@beverage30.id), method: :get %></p>
+                <p><%= link_to @beverage30.milk_type, beverage_path(@beverage30.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage31.item, beverage_path(@beverage31.id), method: :get %></p>
+                <p><%= link_to @beverage31.milk_type, beverage_path(@beverage31.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage32.item, beverage_path(@beverage32.id), method: :get %></p>
+                <p><%= link_to @beverage32.milk_type, beverage_path(@beverage32.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage33.item, beverage_path(@beverage33.id), method: :get %></p>
+                <p><%= link_to @beverage33.milk_type, beverage_path(@beverage33.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage34.item, beverage_path(@beverage34.id), method: :get %></p>
+                <p><%= link_to @beverage34.milk_type, beverage_path(@beverage34.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage35.item, beverage_path(@beverage35.id), method: :get %></p>
+                <p><%= link_to @beverage35.milk_type, beverage_path(@beverage35.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "decaf-starbucks-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage36.item, beverage_path(@beverage36.id), method: :get %></p>
+                <p><%= link_to @beverage36.milk_type, beverage_path(@beverage36.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "soi-late.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage37.item, beverage_path(@beverage37.id), method: :get %></p>
+                <p><%= link_to @beverage37.milk_type, beverage_path(@beverage37.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "soi-late.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage38.item, beverage_path(@beverage38.id), method: :get %></p>
+                <p><%= link_to @beverage38.milk_type, beverage_path(@beverage38.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage39.item, beverage_path(@beverage39.id), method: :get %></p>
+                <p><%= link_to @beverage39.milk_type, beverage_path(@beverage39.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage40.item, beverage_path(@beverage40.id), method: :get %></p>
+                <p><%= link_to @beverage40.milk_type, beverage_path(@beverage40.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage41.item, beverage_path(@beverage41.id), method: :get %></p>
+                <p><%= link_to @beverage41.milk_type, beverage_path(@beverage41.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage42.item, beverage_path(@beverage42.id), method: :get %></p>
+                <p><%= link_to @beverage42.milk_type, beverage_path(@beverage42.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage43.item, beverage_path(@beverage43.id), method: :get %></p>
+                <p><%= link_to @beverage43.milk_type, beverage_path(@beverage43.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage44.item, beverage_path(@beverage44.id), method: :get %></p>
+                <p><%= link_to @beverage44.milk_type, beverage_path(@beverage44.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "ice-mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage45.item, beverage_path(@beverage45.id), method: :get %></p>
+                <p><%= link_to @beverage45.milk_type, beverage_path(@beverage45.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "ice-mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage46.item, beverage_path(@beverage46.id), method: :get %></p>
+                <p><%= link_to @beverage46.milk_type, beverage_path(@beverage46.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "ice-mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage47.item, beverage_path(@beverage47.id), method: :get %></p>
+                <p><%= link_to @beverage47.milk_type, beverage_path(@beverage47.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "ice-mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage48.item, beverage_path(@beverage48.id), method: :get %></p>
+                <p><%= link_to @beverage48.milk_type, beverage_path(@beverage48.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "ice-mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage49.item, beverage_path(@beverage49.id), method: :get %></p>
+                <p><%= link_to @beverage49.milk_type, beverage_path(@beverage49.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "ice-mousse-foam-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage50.item, beverage_path(@beverage50.id), method: :get %></p>
+                <p><%= link_to @beverage50.milk_type, beverage_path(@beverage50.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-form-caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage51.item, beverage_path(@beverage51.id), method: :get %></p>
+                <p><%= link_to @beverage51.milk_type, beverage_path(@beverage51.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-form-caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage52.item, beverage_path(@beverage52.id), method: :get %></p>
+                <p><%= link_to @beverage52.milk_type, beverage_path(@beverage52.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-form-caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage53.item, beverage_path(@beverage53.id), method: :get %></p>
+                <p><%= link_to @beverage53.milk_type, beverage_path(@beverage53.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-form-caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage54.item, beverage_path(@beverage54.id), method: :get %></p>
+                <p><%= link_to @beverage54.milk_type, beverage_path(@beverage54.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-form-caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage55.item, beverage_path(@beverage55.id), method: :get %></p>
+                <p><%= link_to @beverage55.milk_type, beverage_path(@beverage55.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mousse-form-caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage56.item, beverage_path(@beverage56.id), method: :get %></p>
+                <p><%= link_to @beverage56.milk_type, beverage_path(@beverage56.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage57.item, beverage_path(@beverage57.id), method: :get %></p>
+                <p><%= link_to @beverage57.milk_type, beverage_path(@beverage57.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage58.item, beverage_path(@beverage58.id), method: :get %></p>
+                <p><%= link_to @beverage58.milk_type, beverage_path(@beverage58.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage59.item, beverage_path(@beverage59.id), method: :get %></p>
+                <p><%= link_to @beverage59.milk_type, beverage_path(@beverage59.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage60.item, beverage_path(@beverage60.id), method: :get %></p>
+                <p><%= link_to @beverage60.milk_type, beverage_path(@beverage60.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage61.item, beverage_path(@beverage61.id), method: :get %></p>
+                <p><%= link_to @beverage61.milk_type, beverage_path(@beverage61.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage62.item, beverage_path(@beverage62.id), method: :get %></p>
+                <p><%= link_to @beverage62.milk_type, beverage_path(@beverage62.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage63.item, beverage_path(@beverage63.id), method: :get %></p>
+                <p><%= link_to @beverage63.milk_type, beverage_path(@beverage63.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage64.item, beverage_path(@beverage64.id), method: :get %></p>
+                <p><%= link_to @beverage64.milk_type, beverage_path(@beverage64.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage65.item, beverage_path(@beverage65.id), method: :get %></p>
+                <p><%= link_to @beverage65.milk_type, beverage_path(@beverage65.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage66.item, beverage_path(@beverage66.id), method: :get %></p>
+                <p><%= link_to @beverage66.milk_type, beverage_path(@beverage66.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage67.item, beverage_path(@beverage67.id), method: :get %></p>
+                <p><%= link_to @beverage67.milk_type, beverage_path(@beverage67.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage68.item, beverage_path(@beverage68.id), method: :get %></p>
+                <p><%= link_to @beverage68.milk_type, beverage_path(@beverage68.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage69.item, beverage_path(@beverage69.id), method: :get %></p>
+                <p><%= link_to @beverage69.milk_type, beverage_path(@beverage69.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage70.item, beverage_path(@beverage70.id), method: :get %></p>
+                <p><%= link_to @beverage70.milk_type, beverage_path(@beverage70.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage71.item, beverage_path(@beverage71.id), method: :get %></p>
+                <p><%= link_to @beverage71.milk_type, beverage_path(@beverage71.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage72.item, beverage_path(@beverage72.id), method: :get %></p>
+                <p><%= link_to @beverage72.milk_type, beverage_path(@beverage72.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage73.item, beverage_path(@beverage73.id), method: :get %></p>
+                <p><%= link_to @beverage73.milk_type, beverage_path(@beverage73.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage74.item, beverage_path(@beverage74.id), method: :get %></p>
+                <p><%= link_to @beverage74.milk_type, beverage_path(@beverage74.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-americano.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage75.item, beverage_path(@beverage75.id), method: :get %></p>
+                <p><%= link_to @beverage75.milk_type, beverage_path(@beverage75.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cafe-americano.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage76.item, beverage_path(@beverage76.id), method: :get %></p>
+                <p><%= link_to @beverage76.milk_type, beverage_path(@beverage76.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage77.item, beverage_path(@beverage77.id), method: :get %></p>
+                <p><%= link_to @beverage77.milk_type, beverage_path(@beverage77.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage78.item, beverage_path(@beverage78.id), method: :get %></p>
+                <p><%= link_to @beverage78.milk_type, beverage_path(@beverage78.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage79.item, beverage_path(@beverage79.id), method: :get %></p>
+                <p><%= link_to @beverage79.milk_type, beverage_path(@beverage79.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage80.item, beverage_path(@beverage80.id), method: :get %></p>
+                <p><%= link_to @beverage80.milk_type, beverage_path(@beverage80.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage81.item, beverage_path(@beverage81.id), method: :get %></p>
+                <p><%= link_to @beverage81.milk_type, beverage_path(@beverage81.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage82.item, beverage_path(@beverage82.id), method: :get %></p>
+                <p><%= link_to @beverage82.milk_type, beverage_path(@beverage82.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage83.item, beverage_path(@beverage83.id), method: :get %></p>
+                <p><%= link_to @beverage83.milk_type, beverage_path(@beverage83.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage84.item, beverage_path(@beverage84.id), method: :get %></p>
+                <p><%= link_to @beverage84.milk_type, beverage_path(@beverage84.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage85.item, beverage_path(@beverage85.id), method: :get %></p>
+                <p><%= link_to @beverage85.milk_type, beverage_path(@beverage85.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage86.item, beverage_path(@beverage86.id), method: :get %></p>
+                <p><%= link_to @beverage86.milk_type, beverage_path(@beverage86.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage87.item, beverage_path(@beverage87.id), method: :get %></p>
+                <p><%= link_to @beverage87.milk_type, beverage_path(@beverage87.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-macchiato.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage88.item, beverage_path(@beverage88.id), method: :get %></p>
+                <p><%= link_to @beverage88.milk_type, beverage_path(@beverage88.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage89.item, beverage_path(@beverage89.id), method: :get %></p>
+                <p><%= link_to @beverage89.milk_type, beverage_path(@beverage89.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage90.item, beverage_path(@beverage90.id), method: :get %></p>
+                <p><%= link_to @beverage90.milk_type, beverage_path(@beverage90.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage91.item, beverage_path(@beverage91.id), method: :get %></p>
+                <p><%= link_to @beverage91.milk_type, beverage_path(@beverage91.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage92.item, beverage_path(@beverage92.id), method: :get %></p>
+                <p><%= link_to @beverage92.milk_type, beverage_path(@beverage92.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage93.item, beverage_path(@beverage93.id), method: :get %></p>
+                <p><%= link_to @beverage93.milk_type, beverage_path(@beverage93.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage94.item, beverage_path(@beverage94.id), method: :get %></p>
+                <p><%= link_to @beverage94.milk_type, beverage_path(@beverage94.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage95.item, beverage_path(@beverage95.id), method: :get %></p>
+                <p><%= link_to @beverage95.milk_type, beverage_path(@beverage95.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage96.item, beverage_path(@beverage96.id), method: :get %></p>
+                <p><%= link_to @beverage96.milk_type, beverage_path(@beverage96.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage97.item, beverage_path(@beverage97.id), method: :get %></p>
+                <p><%= link_to @beverage97.milk_type, beverage_path(@beverage97.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage98.item, beverage_path(@beverage98.id), method: :get %></p>
+                <p><%= link_to @beverage98.milk_type, beverage_path(@beverage98.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage99.item, beverage_path(@beverage99.id), method: :get %></p>
+                <p><%= link_to @beverage99.milk_type, beverage_path(@beverage99.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "white-mocha.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage100.item, beverage_path(@beverage100.id), method: :get %></p>
+                <p><%= link_to @beverage100.milk_type, beverage_path(@beverage100.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h1>frappuccino</h1>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "espresso-affogato-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage101.item, beverage_path(@beverage101.id), method: :get %></p>
+                <p><%= link_to @beverage101.milk_type, beverage_path(@beverage101.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage102.item, beverage_path(@beverage102.id), method: :get %></p>
+                <p><%= link_to @beverage102.milk_type, beverage_path(@beverage102.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage103.item, beverage_path(@beverage103.id), method: :get %></p>
+                <p><%= link_to @beverage103.milk_type, beverage_path(@beverage103.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage104.item, beverage_path(@beverage104.id), method: :get %></p>
+                <p><%= link_to @beverage104.milk_type, beverage_path(@beverage104.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage105.item, beverage_path(@beverage105.id), method: :get %></p>
+                <p><%= link_to @beverage105.milk_type, beverage_path(@beverage105.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage106.item, beverage_path(@beverage106.id), method: :get %></p>
+                <p><%= link_to @beverage106.milk_type, beverage_path(@beverage106.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "coffee-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage107.item, beverage_path(@beverage107.id), method: :get %></p>
+                <p><%= link_to @beverage107.milk_type, beverage_path(@beverage107.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage108.item, beverage_path(@beverage108.id), method: :get %></p>
+                <p><%= link_to @beverage108.milk_type, beverage_path(@beverage108.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage109.item, beverage_path(@beverage109.id), method: :get %></p>
+                <p><%= link_to @beverage109.milk_type, beverage_path(@beverage109.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage110.item, beverage_path(@beverage110.id), method: :get %></p>
+                <p><%= link_to @beverage110.milk_type, beverage_path(@beverage110.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage111.item, beverage_path(@beverage111.id), method: :get %></p>
+                <p><%= link_to @beverage111.milk_type, beverage_path(@beverage111.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage112.item, beverage_path(@beverage112.id), method: :get %></p>
+                <p><%= link_to @beverage112.milk_type, beverage_path(@beverage112.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage113.item, beverage_path(@beverage113.id), method: :get %></p>
+                <p><%= link_to @beverage113.milk_type, beverage_path(@beverage113.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage114.item, beverage_path(@beverage114.id), method: :get %></p>
+                <p><%= link_to @beverage114.milk_type, beverage_path(@beverage114.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage115.item, beverage_path(@beverage115.id), method: :get %></p>
+                <p><%= link_to @beverage115.milk_type, beverage_path(@beverage115.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage116.item, beverage_path(@beverage116.id), method: :get %></p>
+                <p><%= link_to @beverage116.milk_type, beverage_path(@beverage116.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage117.item, beverage_path(@beverage117.id), method: :get %></p>
+                <p><%= link_to @beverage117.milk_type, beverage_path(@beverage117.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage118.item, beverage_path(@beverage118.id), method: :get %></p>
+                <p><%= link_to @beverage118.milk_type, beverage_path(@beverage118.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage119.item, beverage_path(@beverage119.id), method: :get %></p>
+                <p><%= link_to @beverage119.milk_type, beverage_path(@beverage119.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage120.item, beverage_path(@beverage120.id), method: :get %></p>
+                <p><%= link_to @beverage120.milk_type, beverage_path(@beverage120.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage121.item, beverage_path(@beverage121.id), method: :get %></p>
+                <p><%= link_to @beverage121.milk_type, beverage_path(@beverage121.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage122.item, beverage_path(@beverage122.id), method: :get %></p>
+                <p><%= link_to @beverage122.milk_type, beverage_path(@beverage122.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage123.item, beverage_path(@beverage123.id), method: :get %></p>
+                <p><%= link_to @beverage123.milk_type, beverage_path(@beverage123.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage124.item, beverage_path(@beverage124.id), method: :get %></p>
+                <p><%= link_to @beverage124.milk_type, beverage_path(@beverage124.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage125.item, beverage_path(@beverage125.id), method: :get %></p>
+                <p><%= link_to @beverage125.milk_type, beverage_path(@beverage125.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "vanilla-cream-frappuccino", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage126.item, beverage_path(@beverage126.id), method: :get %></p>
+                <p><%= link_to @beverage126.milk_type, beverage_path(@beverage126.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "vanilla-cream-frappuccino", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage127.item, beverage_path(@beverage127.id), method: :get %></p>
+                <p><%= link_to @beverage127.milk_type, beverage_path(@beverage127.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "vanilla-cream-frappuccino", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage128.item, beverage_path(@beverage128.id), method: :get %></p>
+                <p><%= link_to @beverage128.milk_type, beverage_path(@beverage128.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "vanilla-cream-frappuccino", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage129.item, beverage_path(@beverage129.id), method: :get %></p>
+                <p><%= link_to @beverage129.milk_type, beverage_path(@beverage129.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "vanilla-cream-frappuccino", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage130.item, beverage_path(@beverage130.id), method: :get %></p>
+                <p><%= link_to @beverage130.milk_type, beverage_path(@beverage130.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "vanilla-cream-frappuccino", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage131.item, beverage_path(@beverage131.id), method: :get %></p>
+                <p><%= link_to @beverage131.milk_type, beverage_path(@beverage131.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage132.item, beverage_path(@beverage132.id), method: :get %></p>
+                <p><%= link_to @beverage132.milk_type, beverage_path(@beverage132.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage133.item, beverage_path(@beverage133.id), method: :get %></p>
+                <p><%= link_to @beverage133.milk_type, beverage_path(@beverage133.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage134.item, beverage_path(@beverage134.id), method: :get %></p>
+                <p><%= link_to @beverage134.milk_type, beverage_path(@beverage134.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage135.item, beverage_path(@beverage135.id), method: :get %></p>
+                <p><%= link_to @beverage135.milk_type, beverage_path(@beverage135.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage136.item, beverage_path(@beverage136.id), method: :get %></p>
+                <p><%= link_to @beverage136.milk_type, beverage_path(@beverage136.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "dark-mocha-chip-cream-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage137.item, beverage_path(@beverage137.id), method: :get %></p>
+                <p><%= link_to @beverage137.milk_type, beverage_path(@beverage137.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mango-passion-tea-frappuccino.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage138.item, beverage_path(@beverage138.id), method: :get %></p>
+                <p><%= link_to @beverage138.milk_type, beverage_path(@beverage138.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h1>other</h1>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage139.item, beverage_path(@beverage139.id), method: :get %></p>
+                <p><%= link_to @beverage139.milk_type, beverage_path(@beverage139.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage140.item, beverage_path(@beverage140.id), method: :get %></p>
+                <p><%= link_to @beverage140.milk_type, beverage_path(@beverage140.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage141.item, beverage_path(@beverage141.id), method: :get %></p>
+                <p><%= link_to @beverage141.milk_type, beverage_path(@beverage141.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage142.item, beverage_path(@beverage142.id), method: :get %></p>
+                <p><%= link_to @beverage142.milk_type, beverage_path(@beverage142.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage143.item, beverage_path(@beverage143.id), method: :get %></p>
+                <p><%= link_to @beverage143.milk_type, beverage_path(@beverage143.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage144.item, beverage_path(@beverage144.id), method: :get %></p>
+                <p><%= link_to @beverage144.milk_type, beverage_path(@beverage144.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage145.item, beverage_path(@beverage145.id), method: :get %></p>
+                <p><%= link_to @beverage145.milk_type, beverage_path(@beverage145.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage146.item, beverage_path(@beverage146.id), method: :get %></p>
+                <p><%= link_to @beverage146.milk_type, beverage_path(@beverage146.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage147.item, beverage_path(@beverage147.id), method: :get %></p>
+                <p><%= link_to @beverage147.milk_type, beverage_path(@beverage147.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage148.item, beverage_path(@beverage148.id), method: :get %></p>
+                <p><%= link_to @beverage148.milk_type, beverage_path(@beverage148.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage149.item, beverage_path(@beverage149.id), method: :get %></p>
+                <p><%= link_to @beverage149.milk_type, beverage_path(@beverage149.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "cocoa.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage150.item, beverage_path(@beverage150.id), method: :get %></p>
+                <p><%= link_to @beverage150.milk_type, beverage_path(@beverage150.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-steamer.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage151.item, beverage_path(@beverage151.id), method: :get %></p>
+                <p><%= link_to @beverage151.milk_type, beverage_path(@beverage151.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-steamer.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage152.item, beverage_path(@beverage152.id), method: :get %></p>
+                <p><%= link_to @beverage152.milk_type, beverage_path(@beverage152.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-steamer.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage153.item, beverage_path(@beverage153.id), method: :get %></p>
+                <p><%= link_to @beverage153.milk_type, beverage_path(@beverage153.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-steamer.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage154.item, beverage_path(@beverage154.id), method: :get %></p>
+                <p><%= link_to @beverage154.milk_type, beverage_path(@beverage154.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-steamer.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage155.item, beverage_path(@beverage155.id), method: :get %></p>
+                <p><%= link_to @beverage155.milk_type, beverage_path(@beverage155.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "caramel-steamer.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage156.item, beverage_path(@beverage156.id), method: :get %></p>
+                <p><%= link_to @beverage156.milk_type, beverage_path(@beverage156.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage157.item, beverage_path(@beverage157.id), method: :get %></p>
+                <p><%= link_to @beverage157.milk_type, beverage_path(@beverage157.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage158.item, beverage_path(@beverage158.id), method: :get %></p>
+                <p><%= link_to @beverage158.milk_type, beverage_path(@beverage158.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage159.item, beverage_path(@beverage159.id), method: :get %></p>
+                <p><%= link_to @beverage159.milk_type, beverage_path(@beverage159.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage160.item, beverage_path(@beverage160.id), method: :get %></p>
+                <p><%= link_to @beverage160.milk_type, beverage_path(@beverage160.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage161.item, beverage_path(@beverage161.id), method: :get %></p>
+                <p><%= link_to @beverage161.milk_type, beverage_path(@beverage161.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage162.item, beverage_path(@beverage162.id), method: :get %></p>
+                <p><%= link_to @beverage162.milk_type, beverage_path(@beverage162.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage163.item, beverage_path(@beverage163.id), method: :get %></p>
+                <p><%= link_to @beverage163.milk_type, beverage_path(@beverage163.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage164.item, beverage_path(@beverage164.id), method: :get %></p>
+                <p><%= link_to @beverage164.milk_type, beverage_path(@beverage164.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage165.item, beverage_path(@beverage165.id), method: :get %></p>
+                <p><%= link_to @beverage165.milk_type, beverage_path(@beverage165.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage166.item, beverage_path(@beverage166.id), method: :get %></p>
+                <p><%= link_to @beverage166.milk_type, beverage_path(@beverage166.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage167.item, beverage_path(@beverage167.id), method: :get %></p>
+                <p><%= link_to @beverage167.milk_type, beverage_path(@beverage167.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "milk.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage168.item, beverage_path(@beverage168.id), method: :get %></p>
+                <p><%= link_to @beverage168.milk_type, beverage_path(@beverage168.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h1>tea</h1>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage169.item, beverage_path(@beverage169.id), method: :get %></p>
+                <p><%= link_to @beverage169.milk_type, beverage_path(@beverage169.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage170.item, beverage_path(@beverage170.id), method: :get %></p>
+                <p><%= link_to @beverage170.milk_type, beverage_path(@beverage170.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage171.item, beverage_path(@beverage171.id), method: :get %></p>
+                <p><%= link_to @beverage171.milk_type, beverage_path(@beverage171.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage172.item, beverage_path(@beverage172.id), method: :get %></p>
+                <p><%= link_to @beverage172.milk_type, beverage_path(@beverage172.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage173.item, beverage_path(@beverage173.id), method: :get %></p>
+                <p><%= link_to @beverage173.milk_type, beverage_path(@beverage173.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "matcha-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage174.item, beverage_path(@beverage174.id), method: :get %></p>
+                <p><%= link_to @beverage174.milk_type, beverage_path(@beverage174.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage175.item, beverage_path(@beverage175.id), method: :get %></p>
+                <p><%= link_to @beverage175.milk_type, beverage_path(@beverage175.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage176.item, beverage_path(@beverage176.id), method: :get %></p>
+                <p><%= link_to @beverage176.milk_type, beverage_path(@beverage176.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage177.item, beverage_path(@beverage177.id), method: :get %></p>
+                <p><%= link_to @beverage177.milk_type, beverage_path(@beverage177.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage178.item, beverage_path(@beverage178.id), method: :get %></p>
+                <p><%= link_to @beverage178.milk_type, beverage_path(@beverage178.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage179.item, beverage_path(@beverage179.id), method: :get %></p>
+                <p><%= link_to @beverage179.milk_type, beverage_path(@beverage179.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage180.item, beverage_path(@beverage180.id), method: :get %></p>
+                <p><%= link_to @beverage180.milk_type, beverage_path(@beverage180.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage181.item, beverage_path(@beverage181.id), method: :get %></p>
+                <p><%= link_to @beverage181.milk_type, beverage_path(@beverage181.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage182.item, beverage_path(@beverage182.id), method: :get %></p>
+                <p><%= link_to @beverage182.milk_type, beverage_path(@beverage182.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage183.item, beverage_path(@beverage183.id), method: :get %></p>
+                <p><%= link_to @beverage183.milk_type, beverage_path(@beverage183.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage184.item, beverage_path(@beverage184.id), method: :get %></p>
+                <p><%= link_to @beverage184.milk_type, beverage_path(@beverage184.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage185.item, beverage_path(@beverage185.id), method: :get %></p>
+                <p><%= link_to @beverage185.milk_type, beverage_path(@beverage185.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chai-tea-latte.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage186.item, beverage_path(@beverage186.id), method: :get %></p>
+                <p><%= link_to @beverage186.milk_type, beverage_path(@beverage186.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage187.item, beverage_path(@beverage187.id), method: :get %></p>
+                <p><%= link_to @beverage187.milk_type, beverage_path(@beverage187.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage188.item, beverage_path(@beverage188.id), method: :get %></p>
+                <p><%= link_to @beverage188.milk_type, beverage_path(@beverage188.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage189.item, beverage_path(@beverage189.id), method: :get %></p>
+                <p><%= link_to @beverage189.milk_type, beverage_path(@beverage189.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage190.item, beverage_path(@beverage190.id), method: :get %></p>
+                <p><%= link_to @beverage190.milk_type, beverage_path(@beverage190.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage191.item, beverage_path(@beverage191.id), method: :get %></p>
+                <p><%= link_to @beverage191.milk_type, beverage_path(@beverage191.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage192.item, beverage_path(@beverage192.id), method: :get %></p>
+                <p><%= link_to @beverage192.milk_type, beverage_path(@beverage192.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage193.item, beverage_path(@beverage193.id), method: :get %></p>
+                <p><%= link_to @beverage193.milk_type, beverage_path(@beverage193.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage194.item, beverage_path(@beverage194.id), method: :get %></p>
+                <p><%= link_to @beverage194.milk_type, beverage_path(@beverage194.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage195.item, beverage_path(@beverage195.id), method: :get %></p>
+                <p><%= link_to @beverage195.milk_type, beverage_path(@beverage195.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage196.item, beverage_path(@beverage196.id), method: :get %></p>
+                <p><%= link_to @beverage196.milk_type, beverage_path(@beverage196.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage197.item, beverage_path(@beverage197.id), method: :get %></p>
+                <p><%= link_to @beverage197.milk_type, beverage_path(@beverage197.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage198.item, beverage_path(@beverage198.id), method: :get %></p>
+                <p><%= link_to @beverage198.milk_type, beverage_path(@beverage198.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage199.item, beverage_path(@beverage199.id), method: :get %></p>
+                <p><%= link_to @beverage199.milk_type, beverage_path(@beverage199.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage200.item, beverage_path(@beverage200.id), method: :get %></p>
+                <p><%= link_to @beverage200.milk_type, beverage_path(@beverage200.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage201.item, beverage_path(@beverage201.id), method: :get %></p>
+                <p><%= link_to @beverage201.milk_type, beverage_path(@beverage201.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage202.item, beverage_path(@beverage202.id), method: :get %></p>
+                <p><%= link_to @beverage202.milk_type, beverage_path(@beverage202.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage203.item, beverage_path(@beverage203.id), method: :get %></p>
+                <p><%= link_to @beverage203.milk_type, beverage_path(@beverage203.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage204.item, beverage_path(@beverage204.id), method: :get %></p>
+                <p><%= link_to @beverage204.milk_type, beverage_path(@beverage204.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage205.item, beverage_path(@beverage205.id), method: :get %></p>
+                <p><%= link_to @beverage205.milk_type, beverage_path(@beverage205.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage206.item, beverage_path(@beverage206.id), method: :get %></p>
+                <p><%= link_to @beverage206.milk_type, beverage_path(@beverage206.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage207.item, beverage_path(@beverage207.id), method: :get %></p>
+                <p><%= link_to @beverage207.milk_type, beverage_path(@beverage207.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage208.item, beverage_path(@beverage208.id), method: :get %></p>
+                <p><%= link_to @beverage208.milk_type, beverage_path(@beverage208.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage209.item, beverage_path(@beverage209.id), method: :get %></p>
+                <p><%= link_to @beverage209.milk_type, beverage_path(@beverage209.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage210.item, beverage_path(@beverage210.id), method: :get %></p>
+                <p><%= link_to @beverage210.milk_type, beverage_path(@beverage210.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage211.item, beverage_path(@beverage211.id), method: :get %></p>
+                <p><%= link_to @beverage211.milk_type, beverage_path(@beverage211.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage212.item, beverage_path(@beverage212.id), method: :get %></p>
+                <p><%= link_to @beverage212.milk_type, beverage_path(@beverage212.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage213.item, beverage_path(@beverage213.id), method: :get %></p>
+                <p><%= link_to @beverage213.milk_type, beverage_path(@beverage213.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage214.item, beverage_path(@beverage214.id), method: :get %></p>
+                <p><%= link_to @beverage214.milk_type, beverage_path(@beverage214.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage215.item, beverage_path(@beverage215.id), method: :get %></p>
+                <p><%= link_to @beverage215.milk_type, beverage_path(@beverage215.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage216.item, beverage_path(@beverage216.id), method: :get %></p>
+                <p><%= link_to @beverage216.milk_type, beverage_path(@beverage216.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "youth-berry.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage217.item, beverage_path(@beverage217.id), method: :get %></p>
+                <p><%= link_to @beverage217.milk_type, beverage_path(@beverage217.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "mint-citrus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage218.item, beverage_path(@beverage218.id), method: :get %></p>
+                <p><%= link_to @beverage218.milk_type, beverage_path(@beverage218.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "english-breakfast.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage219.item, beverage_path(@beverage219.id), method: :get %></p>
+                <p><%= link_to @beverage219.milk_type, beverage_path(@beverage219.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "earl-grey.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage220.item, beverage_path(@beverage220.id), method: :get %></p>
+                <p><%= link_to @beverage220.milk_type, beverage_path(@beverage220.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "chamomile.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage221.item, beverage_path(@beverage221.id), method: :get %></p>
+                <p><%= link_to @beverage221.milk_type, beverage_path(@beverage221.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "hypiscus.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage222.item, beverage_path(@beverage222.id), method: :get %></p>
+                <p><%= link_to @beverage222.milk_type, beverage_path(@beverage222.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "roasted-green-tea.jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage223.item, beverage_path(@beverage223.id), method: :get %></p>
+                <p><%= link_to @beverage223.milk_type, beverage_path(@beverage223.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage224.item, beverage_path(@beverage224.id), method: :get %></p>
+                <p><%= link_to @beverage224.milk_type, beverage_path(@beverage224.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "iced-tea-(black).jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage225.item, beverage_path(@beverage225.id), method: :get %></p>
+                <p><%= link_to @beverage225.milk_type, beverage_path(@beverage225.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 10rem;">
+            <%= image_tag "iced-tea-(passion).jpg", class: 'image_size' %>
+            <div class="card-body">
+              <p class="card-text">
+                <p><%= link_to @beverage226.item, beverage_path(@beverage1.id), method: :get %></p>
+                <p><%= link_to @beverage226.milk_type, beverage_path(@beverage226.id), method: :get %></p>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <%# grid %>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    
+  </body>
+</html>
