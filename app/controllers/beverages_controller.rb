@@ -1,4 +1,5 @@
 class BeveragesController < ApplicationController
+  
   def index
     @beverage1 = Beverage.find(1)
     @beverage2 = Beverage.find(2)
